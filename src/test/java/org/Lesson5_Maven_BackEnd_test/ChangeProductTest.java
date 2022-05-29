@@ -39,7 +39,7 @@ public class ChangeProductTest {
     @Test
     @Tag("Positive")
     @DisplayName("Change product (Positive)")
-    void changeProductPositiveTest() throws IOException {
+    void modifyProductPositiveTest() throws IOException {
         Response<Product> response = productService.getProductById(id).execute();
         assertThat(response.isSuccessful(), CoreMatchers.is(true));
         assert response.body() != null;
@@ -74,7 +74,7 @@ public class ChangeProductTest {
     @Test
     @Tag("Negative")
     @DisplayName("Change product (Negative)")
-    void changeProductNegativeTest() throws IOException {
+    void modifyProductNegativeTest() throws IOException {
         Response<Product> response = productService.getProductById(id).execute();
         assertThat(response.isSuccessful(), CoreMatchers.is(true));
         assert response.body() != null;
